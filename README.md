@@ -4,7 +4,7 @@ A responsive weather dashboard built with plain HTML, CSS and JavaScript. Search
 
 **Live demo:** [https://vigneshbura.github.io/weather-dashboard/](https://vigneshbura.github.io/weather-dashboard/)
 
-![Screenshot](screenshot.png)
+![Screenshot](weather-dashboard.png)
 
 ## Features
 

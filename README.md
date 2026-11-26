@@ -2,7 +2,7 @@
 
 A responsive weather dashboard built with plain HTML, CSS and JavaScript. Search any city and see current weather, hourly and 5-day forecasts, a temperature trend chart and air quality.
 
-**Live demo:** _add your GitHub Pages link here_
+**Live demo:** [https://vigneshbura.github.io/weather-dashboard/](https://vigneshbura.github.io/weather-dashboard/)
 
 ![Screenshot](screenshot.png)
 

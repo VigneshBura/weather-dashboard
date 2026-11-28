@@ -6,7 +6,7 @@
 <title>Weather Dashboard</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <style>
-:root{ --bg:#0b0d12; --panel:#10141c; --card:#151a23; --edge:#232a37; --text:#f1f3f7; --muted:#8a93a6; --orange:#ff7a1a; --deep:#c2410c; }
+:root{ --bg:#0b0d12; --panel:#0e131b; --card:#131924; --edge:#1f2937; --text:#f1f3f7; --muted:#8a93a6; --orange:#1fb6c8; --deep:#1298a6; }
 *{ box-sizing:border-box; margin:0; }
 body{ background:var(--bg); color:var(--text); font-family:"Segoe UI",system-ui,sans-serif; padding:16px; }
 [data-i]{ display:inline-flex; vertical-align:middle; }
@@ -22,8 +22,7 @@ body{ background:var(--bg); color:var(--text); font-family:"Segoe UI",system-ui,
 .brandicon{ color:var(--orange); }
 .navs{ display:flex; flex-direction:column; gap:6px; }
 .nav{ display:flex; align-items:center; gap:10px; padding:11px 12px; border-radius:12px; color:var(--muted); font:inherit; font-size:.9rem; background:none; border:1px solid transparent; width:100%; text-align:left; cursor:pointer; position:relative; }
-.nav:hover{ color:var(--text); }
-.nav.on{ background:rgba(255,122,26,.18); color:var(--text); border-color:rgba(255,122,26,.4); }
+.nav.on{ background:rgba(31,182,200,.18); color:var(--text); border-color:rgba(31,182,200,.45); }
 .badge{ margin-left:auto; background:#ef4444; color:#fff; border-radius:999px; font-size:.7rem; font-weight:700; padding:1px 7px; display:none; }
 .loc{ margin-top:auto; background:var(--card); border:1px solid var(--edge); border-radius:14px; padding:12px; }
 .locrow{ display:flex; gap:10px; align-items:center; color:var(--orange); }

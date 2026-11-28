@@ -112,15 +112,23 @@ input:focus-visible,button:focus-visible{ outline:2px solid var(--orange); }
 .inl{ display:flex; gap:8px; }
 .inl input{ width:170px; }
 
-@media (max-width:1000px){ .main{ grid-template-columns:1fr; } .row{ grid-template-columns:1fr; } }
 @media (max-width:760px){
-  .shell{ grid-template-columns:1fr; }
-  .side{ flex-direction:row; flex-wrap:wrap; align-items:center; }
-  .brand{ margin:0 12px 0 0; }
-  .nav{ width:auto; padding:8px 10px; }
-  .loc{ margin:0; flex-basis:100%; }
-  .hourly{ grid-template-columns:repeat(3,1fr); }
-  .fcrow{ grid-template-columns:70px 32px 1fr 80px; }
+  body{ padding:8px; }
+  .shell{ grid-template-columns:1fr; padding:12px; border-radius:18px; gap:12px; }
+  .side{ flex-direction:row; flex-wrap:wrap; align-items:center; gap:6px; }
+  .brand{ flex-basis:100%; margin:0 0 4px 0; }
+  .nav{ width:auto; flex:1 1 auto; justify-content:center; padding:8px 10px; font-size:.82rem; gap:6px; }
+  .loc{ margin-top:4px; flex-basis:100%; display:flex; flex-wrap:wrap; align-items:center; gap:8px; padding:10px; }
+  .locrow{ flex-basis:100%; }
+  .loc input{ flex:1; margin:0; }
+  .loc button{ width:auto; padding:8px 16px; }
+  #status{ flex-basis:100%; margin-top:0; }
+  .hero{ min-height:220px; padding:16px; }
+  .hero .temp{ font-size:2.6rem; }
+  .hourly{ grid-template-columns:repeat(3,minmax(0,1fr)); }
+  .aqi{ justify-content:center; }
+  #map{ height:360px; }
+  .fcrow{ grid-template-columns:60px 32px 1fr 75px; font-size:.82rem; }
   .fcrow .hide{ display:none; }
 }
 </style></head>

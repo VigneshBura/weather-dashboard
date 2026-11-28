@@ -1,47 +1,89 @@
-# Weather Dashboard
+# 🌦️ Weather Dashboard
 
-A responsive weather dashboard built with plain HTML, CSS and JavaScript. Search any city and see current weather, hourly and 5-day forecasts, a temperature trend chart and air quality.
+A sleek, responsive, single-file weather dashboard built with vanilla HTML, CSS, and JavaScript. Designed with a modern dark-teal & orange-gradient theme, it adapts seamlessly from a full desktop dashboard to a native-like **Mobile App layout** (sticky search header \+ fixed bottom navigation bar)—with zero API keys or build tools required.
 
-**Live demo:** [https://vigneshbura.github.io/weather-dashboard/](https://vigneshbura.github.io/weather-dashboard/)
+🌐 **Live Demo:** [https\://vigneshbura.github.io/weather-dashboard/](https://vigneshbura.github.io/weather-dashboard/)
 
-![Weather Dashboard](weather-dashboard.png)
+![Weather Dashboard Preview](weather-dashboard.png)
 
-## Features
+## ✨ Features
 
-- City search (button or Enter key) with error handling for unknown cities
-- Current temperature, feels like, high/low, humidity, wind, pressure, visibility, UV index, precipitation
-- Next 12 hours and next 5 days forecast
-- Temperature trend chart (Chart.js)
-- Air quality index (US AQI) with colour-coded category
-- Sunrise and sunset times in 12-hour format
-- °C / °F toggle
-- Simple weather advice (umbrella, sunscreen, heat)
-- Responsive layout for laptop and phone
+### 📊 Overview Dashboard
 
-## Tech used
+* **Hero Weather Card:** Orange-to-teal gradient card displaying live temperature, feels-like temp, daily High/Low, and dynamic day/night weather icons.  
+* **Real-Time Metrics:** Humidity, Wind Speed, Visibility, Pressure, UV Index (with severity level), and Precipitation probability.  
+* **12-Hour Temperature Trend:** Interactive line chart powered by Chart.js.  
+* **Air Quality Index (US AQI):** Circular gauge with color-coded health categories (*Good, Moderate, Unhealthy, Very Unhealthy*).  
+* **Sunrise & Sunset \+ Next 5 Days:** Quick daily outlook and daylight timings.
 
-- HTML5, CSS3 (Grid, Flexbox, media queries)
-- JavaScript (async/await, fetch, DOM manipulation)
-- Chart.js
-- Open-Meteo Geocoding, Forecast and Air Quality APIs (no API key needed)
+### 📱 Mobile-First App Experience
 
-## Run locally
+* **Sticky Top Header:** Compact brand header paired with an inline search bar.  
+* **Fixed Bottom Navigation Bar:** 5-tab mobile navigation (*Overview, Forecast, Maps, Alerts, Settings*) with live alert counter badge.  
+* **Optimized Card Grid:** Side-by-side AQI gauge and Temperature Trend chart, horizontal 5-day forecast strip, and auto-closing mobile keyboard on search.
 
-1. Download or clone this repository
-2. Open `index.html` in a browser (internet connection required)
+### 📅 Detailed Forecast
 
-## What I learned
+* Smooth horizontal-scroll **Next 24 Hours** forecast with rain probabilities.  
+* Complete **7-Day Forecast** with weather conditions, High/Low temperatures, rain %, wind speed, and UV index.
 
-- Calling REST APIs with `fetch` and `async/await`
-- Handling errors with `try/catch`
-- Rendering data into the DOM and keeping UI state in sync
-- Building a responsive layout with CSS Grid
+### 🗺️ Interactive Maps & Live Rain Radar
 
-## Future improvements
+* Powered by **Leaflet.js** with **Esri Street Map** and **Esri Satellite (with labels)** layer switcher.  
+* **Live Rain Radar** overlay toggle via RainViewer API.  
+* **Click-Anywhere Weather:** Click any location on the map to fetch live temperature, weather condition, and wind speed in a popup.
 
-- Auto-detect location
-- Day/night theme
-- Favourite cities
-- Rebuild with React and a Python (FastAPI) backend
+### ⚠️ Automated Weather Alerts
 
-Data provided by [Open-Meteo](https://open-meteo.com/).
+* Automatically detects and prioritizes alerts for thunderstorms, heavy rain, extreme heat, cold waves, high UV, strong winds, poor AQI, and low visibility.  
+* Live alert badge and optional **Browser Notifications** for severe alerts.
+
+### 🔍 Worldwide Search (India-First)
+
+* Dual-provider geocoding (**Open-Meteo \+ Photon**) that prioritizes Indian cities and states while supporting cities, states, and towns worldwide.
+
+### ⚙️ Persistent Settings
+
+* Switch between **°C / °F** and **12-hour / 24-hour** time formats.  
+* Set a custom **Default City**, toggle **Alert Notifications**, or reset to defaults—all saved automatically in `localStorage`.
+
+## 🛠️ Tech Stack & APIs
+
+* **Frontend:** HTML5, CSS3 (Responsive Grid, Flexbox & Media Queries), Vanilla JavaScript  
+* **Charts:** [Chart.js](https://www.chartjs.org/)  
+* **Mapping:** [Leaflet.js](https://leafletjs.com/) \+ [Esri ArcGIS Tiles](https://www.arcgis.com/)  
+* **Weather & Air Quality Data:** [Open-Meteo API](https://open-meteo.com/)  
+* **Geocoding:** [Open-Meteo Geocoding](https://open-meteo.com/en/docs/geocoding-api) & [Photon by Komoot](https://photon.komoot.io/)  
+* **Rain Radar:** [RainViewer API](https://www.rainviewer.com/api.html)
+
+## 🚀 Getting Started
+
+No installation, build step, or API keys are required.
+
+1. **Clone the repository:**
+
+```sh
+git clone https://github.com/vigneshbura/weather-dashboard.git
+cd weather-dashboard
+```
+
+2. **Run locally:** Open `index.html` directly in any modern web browser, or launch it with VS Code's **Live Server** extension.
+
+## 📁 Project Structure
+
+```
+weather-dashboard/
+├── index.html             # Complete single-file application (HTML, CSS, JS)
+├── weather-dashboard.png  # Dashboard preview screenshot
+└── README.md              # Project documentation
+```
+
+## 🌐 Deployment (GitHub Pages)
+
+1. Push `index.html`, `README.md`, and `weather-dashboard.png` to the `main` branch.  
+2. Go to **Repository Settings → Pages**.  
+3. Under **Build and deployment**, select **Deploy from a branch** → **`main`** → **`/ (root)`** and click **Save**.
+
+## 📄 License
+
+This project is open source and available for personal and educational use.
